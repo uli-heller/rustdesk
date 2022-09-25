@@ -7,7 +7,7 @@ if [ "$1" = configure ]; then
 	INITSYS=$(ls -al /proc/1/exe | awk -F' ' '{print $NF}' | awk -F'/' '{print $NF}')
 	
 	if [ "systemd" == "$INITSYS" ]; then
-		ln -s /usr/lib/rustdesk/flutter_hbb /usr/bin/rustdesk
+		#ln -s /usr/lib/rustdesk/flutter_hbb /usr/bin/rustdesk
 
 		if [ -e /etc/systemd/system/rustdesk.service ]; then
 			rm /etc/systemd/system/rustdesk.service /usr/lib/systemd/system/rustdesk.service /usr/lib/systemd/user/rustdesk.service >/dev/null  2>&1
